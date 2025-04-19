@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Website</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(135deg, #7e9493, #a1c6c3); /* Your requested gradient */
+            font-family: 'Poppins', sans-serif;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            text-align: center;
+            padding: 60px 30px;
+        }
+
+        h1 {
+            font-size: 40px;
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+        }
+
+        .developers {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .developer {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            width: 250px;
+            padding: 20px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .developer:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .developer img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 4px solid #fff;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        .developer h3 {
+            font-size: 24px;
+            color: #fff;
+            margin-bottom: 10px;
+        }
+
+        .developer p {
+            font-size: 16px;
+            color: #dcdcdc;
+            line-height: 1.6;
+        }
+
+        .developer a {
+            display: inline-block;
+            margin-top: 10px;
+            color: #ffbb33;
+            text-decoration: none;
+            font-weight: 600;
+            border: 1px solid #ffbb33;
+            padding: 8px 16px;
+            border-radius: 30px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .developer a:hover {
+            background-color: #ffbb33;
+            color: #fff;
+        }
+
+        .back-btn {
+            margin-top: 30px;
+            padding: 12px 24px;
+            background-color: #0072ff;
+            color: white;
+            border: none;
+            border-radius: 30px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-btn:hover {
+            background-color: #005bb5;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Meet the Developers</h1>
+        <div class="developers">   
+            <!-- Developer 1 -->
+            <div class="developer">
+                <img src="pratham.webp" alt="Developer 1">
+                <h3>Pratham Kataria</h3>
+                <p>Pratham is the full-stack developer of the team. He specializes in JavaScript and loves building dynamic web applications.</p>
+                <a href="https://github.com/johndoe" target="_blank">View Profile</a>
+            </div>
+            
+            <!-- Developer 2 -->
+            <div class="developer">
+                <img src="lucifer.png" alt="Developer 2">
+                <h3>Lucifer Sindhwani</h3>
+                <p>lucifer is a front-end developer with a passion for creating intuitive and visually stunning user interfaces.</p>
+                <a href="https://github.com/janesmith" target="_blank">View Profile</a>
+            </div>
+            
+            <!-- Developer 3 -->
+            <div class="developer">
+                <img src="WhatsApp Image 2024-11-27 at 16.30.08_2ebb8fb7.jpg" alt="Developer 3">
+                <h3>Prachi Dhawan</h3>
+                <p>Prachi focuses on back-end development and database management, ensuring the website runs smoothly and securely.</p>
+                <a href="https://github.com/emilyjohnson" target="_blank">View Profile</a>
+            </div>
+        </div>
+
+        <button class="back-btn" onclick="window.location.href='25 aug.html'">Back to Home</button>
+    </div>
+
+</body>
+</html>
