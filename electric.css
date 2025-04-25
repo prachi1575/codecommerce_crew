@@ -107,7 +107,7 @@
             }
         }
 
-        /* Adding sparks on hover */
+        
         .electric-button:hover .spark {
             animation: electric-spark 0.15s infinite;
         }
