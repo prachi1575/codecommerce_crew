@@ -6,4 +6,5 @@ document.addEventListener('DOMContentLoaded', () => {
         image.classList.toggle('zoom-out');
     });
 });
+//js file
 
