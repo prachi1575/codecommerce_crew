@@ -1,0 +1,105 @@
+/* Existing Styles */
+.search-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: 60px;
+}
+
+.search-button {
+    background: rgba(255, 255, 255, 0.3);
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.4s ease-in-out, margin-left 0.4s ease-in-out, background 0.3s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.search-button:hover {
+    background: rgba(255, 255, 255, 0.5);
+    transform: scale(1.1);
+}
+
+.search-button svg {
+    fill: #fff;
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.search-button:hover svg {
+    transform: rotate(90deg);
+}
+
+.search-input {
+    width: 0;
+    opacity: 0;
+    padding: 0;
+    font-size: 18px;
+    border: none;
+    border-radius: 30px;
+    outline: none;
+    background: rgba(255, 255, 255, 0.8);
+    color: #333;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    transition: width 0.4s ease-in-out, opacity 0.4s ease-in-out, padding 0.4s ease-in-out;
+}
+
+.search-container.active .search-input {
+    width: 300px;
+    opacity: 1;
+    padding: 10px 20px;
+}
+
+.search-container.active .search-button {
+    margin-left: 10px;
+}
+
+.search-input::placeholder {
+    color: #aaa;
+    font-style: italic;
+}
+
+/* Dropdown Menu Styles */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    background-color: white;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.dropdown-content button {
+    width: 100%;
+    padding: 10px 20px;
+    background: #f9f9f9;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    font-size: 16px;
+    border-bottom: 1px solid #ddd;
+}
+
+.dropdown-content button:last-child {
+    border-bottom: none;
+}
+
+.dropdown-content button:hover {
+    background-color: #ddd;
+}
+
+.search-container.active + .dropdown-content {
+    display: block;
+}
