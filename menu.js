@@ -1,4 +1,4 @@
-
+//menu bar
 const menuButton = document.getElementById('menu-button');
 const closeButton = document.getElementById('close-button');
 const sideMenu = document.getElementById('side-menu');
