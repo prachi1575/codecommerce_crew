@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Price Comparison</title>
+    <link rel="stylesheet" href="main1.css">
+    <link rel="stylesheet" href="heading.css">
+    <style>
+        /* Basic reset and styling */
+       header{display: flex;
+    justify-content: center;
+color: aliceblue;}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="a"><h1><h1 class="heading">
+            <div class="typing-container">
+                <span id="typing"></span>
+                <span class="cursor"></span>
+            </div>
+        
+        </h1>
+       
+        <script>
+            const words = ["Shirts", "T Shirts", "Froks", "Lower"];
+            let wordIndex = 0;
+            let charIndex = 0;
+            let isDeleting = false;
+    
+            const typingElement = document.getElementById("typing");
+    
+            function type() {
+                const currentWord = words[wordIndex];
+                if (isDeleting) {
+                    charIndex--;
+                } else {
+                    charIndex++;
+                }
+    
+                typingElement.textContent = "Find the Best Deals on " + currentWord.substring(0, charIndex);
+    
+                // Speed control
+                const typingSpeed = isDeleting ? 50 : 100;
+    
+                if (!isDeleting && charIndex === currentWord.length) {
+                    // Pause before deleting
+                    isDeleting = true;
+                    setTimeout(type, 500); // Short pause before deleting
+                } else if (isDeleting && charIndex === 0) {
+                    // Move to the next word
+                    isDeleting = false;
+                    wordIndex = (wordIndex + 1) % words.length; // Loop back to the first word
+                    setTimeout(type, 300); // Short pause before starting next word
+                } else {
+                    setTimeout(type, typingSpeed);
+                }
+            }
+    
+            // Start the typing effect
+            type();
+        </script>
+        
+    </header>
+
+
+    
+
+   
+    <section class="product-container">
+        <!-- Product 1 -->
+        <div class="product-card">
+            <img src="https://static.zara.net/assets/public/2010/b7d2/39dc4ef594ed/e63c0a738611/05679252401-p/05679252401-p.jpg?ts=1723189244945&w=563" alt="Laptop">
+            <h2>fashion 1</h2>
+            <p>Price Comparison:</p>
+            <ul>
+                <li>Amazon: $999</li>
+                <li>eBay: $950</li>
+                <li>Best Buy: $970</li>
+            </ul>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product-card">
+            <img src="https://static.zara.net/assets/public/2010/b7d2/39dc4ef594ed/e63c0a738611/05679252401-p/05679252401-p.jpg?ts=1723189244945&w=563" alt="Smartphone">
+            <h2>fashion 1</h2>
+            <p>Price Comparison:</p>
+            <ul>
+                <li>Amazon: $699</li>
+                <li>eBay: $680</li>
+                <li>Walmart: $690</li>
+            </ul>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product-card">
+            <img src="https://static.zara.net/assets/public/2010/b7d2/39dc4ef594ed/e63c0a738611/05679252401-p/05679252401-p.jpg?ts=1723189244945&w=563" alt="Headphones">
+            <h2>fashion 1</h2>
+            <p>Price Comparison:</p>
+            <ul>
+                <li>Amazon: $199</li>
+                <li>eBay: $180</li>
+                <li>Best Buy: $190</li>
+            </ul>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="product-card">
+            <img src="https://static.zara.net/assets/public/2010/b7d2/39dc4ef594ed/e63c0a738611/05679252401-p/05679252401-p.jpg?ts=1723189244945&w=563" alt="Smartwatch">
+            <h2>fashion 1</h2>
+            <p>Price Comparison:</p>
+            <ul>
+                <li>Amazon: $299</li>
+                <li>eBay: $280</li>
+                <li>Walmart: $290</li>
+            </ul>
+        </div>
+
+        <div class="product-card">
+            <img src="https://static.zara.net/assets/public/2010/b7d2/39dc4ef594ed/e63c0a738611/05679252401-p/05679252401-p.jpg?ts=1723189244945&w=563" alt="Laptop">
+            <h2>fashion 1</h2>
+            <p>Price Comparison:</p>
+            <ul>
+                <li>Amazon: $999</li>
+                <li>eBay: $950</li>
+                <li>Best Buy: $970</li>
+            </ul>
+        </div>
+
+        <div class="product-card">
+            <img src="https://static.zara.net/assets/public/2010/b7d2/39dc4ef594ed/e63c0a738611/05679252401-p/05679252401-p.jpg?ts=1723189244945&w=563" alt="Laptop">
+            <h2>fashion 1</h2>
+            <p>Price Comparison:</p>
+            <ul>
+                <li>Amazon: $999</li>
+                <li>eBay: $950</li>
+                <li>Best Buy: $970</li>
+            </ul>
+        </div>
+
+        <div class="product-card">
+            <img src="https://static.zara.net/assets/public/2010/b7d2/39dc4ef594ed/e63c0a738611/05679252401-p/05679252401-p.jpg?ts=1723189244945&w=563" alt="Laptop">
+            <h2>fashion 1</h2>
+            <p>Price Comparison:</p>
+            <ul>
+                <li>Amazon: $999</li>
+                <li>eBay: $950</li>
+                <li>Best Buy: $970</li>
+            </ul>
+        </div>
+
+        <div class="product-card">
+            <img src="https://static.zara.net/assets/public/2010/b7d2/39dc4ef594ed/e63c0a738611/05679252401-p/05679252401-p.jpg?ts=1723189244945&w=563" alt="Laptop">
+            <h2>fashion 1</h2>
+            <p>Price Comparison:</p>
+            <ul>
+                <li>Amazon: $999</li>
+                <li>eBay: $950</li>
+                <li>Best Buy: $970</li>
+            </ul>
+        </div>
+
+        <div class="product-card">
+            <img src="https://static.zara.net/assets/public/2010/b7d2/39dc4ef594ed/e63c0a738611/05679252401-p/05679252401-p.jpg?ts=1723189244945&w=563" alt="Laptop">
+            <h2>fashion 1</h2>
+            <p>Price Comparison:</p>
+            <ul>
+                <li>Amazon: $999</li>
+                <li>eBay: $950</li>
+                <li>Best Buy: $970</li>
+            </ul>
+        </div>
+
+
+    </section>
+
+    <footer>
+        <div id="footer_text1"> download :  <a class="line" href="#">android application </a>| <a class="line" href="#">iOS application</a></div>
+        <div>&copy Copyright Red Pixels Ventures Limited 2023. All rights reserved.</div>
+
+    </footer>
+
+</body>
+</html>
