@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Price Comparison</title>
+    <link rel="stylesheet" href="main1.css">
+    <link rel="stylesheet" href="heading.css">
+    <style>
+        header{
+            display: flex;
+            justify-content: center;
+            color: aliceblue;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="a"><h1><h1 class="heading">
+            <div class="typing-container">
+                <span id="typing"></span>
+                <span class="cursor"></span>
+            </div>
+        
+        </h1>
+       
+        <script>
+            const words = ["Shuttel", "Ball", "Bat", "Racket","Voleyball"];
+            let wordIndex = 0;
+            let charIndex = 0;
+            let isDeleting = false;
+    
+            const typingElement = document.getElementById("typing");
+    
+            function type() {
+                const currentWord = words[wordIndex];
+                if (isDeleting) {
+                    charIndex--;
+                } else {
+                    charIndex++;
+                }
+    
+                typingElement.textContent = "Find the Best Deals on " + currentWord.substring(0, charIndex);
+    
+                // Speed control
+                const typingSpeed = isDeleting ? 50 : 100;
+    
+                if (!isDeleting && charIndex === currentWord.length) {
+                    // Pause before deleting
+                    isDeleting = true;
+                    setTimeout(type, 500); // Short pause before deleting
+                } else if (isDeleting && charIndex === 0) {
+                    // Move to the next word
+                    isDeleting = false;
+                    wordIndex = (wordIndex + 1) % words.length; // Loop back to the first word
+                    setTimeout(type, 300); // Short pause before starting next word
+                } else {
+                    setTimeout(type, typingSpeed);
+                }
+            }
+    
+            // Start the typing effect
+            type();
+        </script>
+        
+        
+    </header>
+
+
+    
+
+   
+    <section class="product-container">
+        
+        <div class="product-card">
+            <img src="https://superblog.supercdn.cloud/site_cuid_clr6oh1no0006rmr89yhkxgu8/images/various-sport-equipments-generative-ai-1706958639790-compressed.jpg" alt="Laptop">
+            <h2>sports product 1</h2>
+            <p>Price Comparison:</p>
+            <ul>
+                <li>Amazon: $999</li>
+                <li>eBay: $950</li>
+                <li>Best Buy: $970</li>
+            </ul>
+        </div>
+
+        
+        <div class="product-card">
+            <img src="https://superblog.supercdn.cloud/site_cuid_clr6oh1no0006rmr89yhkxgu8/images/various-sport-equipments-generative-ai-1706958639790-compressed.jpg" alt="Smartphone">
+            <h2>sports product 2</h2>
+            <p>Price Comparison:</p>
+            <ul>
+                <li>Amazon: $699</li>
+                <li>eBay: $680</li>
+                <li>Walmart: $690</li>
+            </ul>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product-card">
+            <img src="https://superblog.supercdn.cloud/site_cuid_clr6oh1no0006rmr89yhkxgu8/images/various-sport-equipments-generative-ai-1706958639790-compressed.jpg" alt="Headphones">
+            <h2>sports product 3</h2>
+            <p>Price Comparison:</p>
+            <ul>
+                <li>Amazon: $199</li>
+                <li>eBay: $180</li>
+                <li>Best Buy: $190</li>
+            </ul>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="product-card">
+            <img src="https://superblog.supercdn.cloud/site_cuid_clr6oh1no0006rmr89yhkxgu8/images/various-sport-equipments-generative-ai-1706958639790-compressed.jpg" alt="Smartwatch">
+            <h2>sports product 4</h2>
+            <p>Price Comparison:</p>
+            <ul>
+                <li>Amazon: $299</li>
+                <li>eBay: $280</li>
+                <li>Walmart: $290</li>
+            </ul>
+        </div>
+
+        <div class="product-card">
+            <img src="https://superblog.supercdn.cloud/site_cuid_clr6oh1no0006rmr89yhkxgu8/images/various-sport-equipments-generative-ai-1706958639790-compressed.jpg" alt="Laptop">
+            <h2>sports product 5</h2>
+            <p>Price Comparison:</p>
+            <ul>
+                <li>Amazon: $999</li>
+                <li>eBay: $950</li>
+                <li>Best Buy: $970</li>
+            </ul>
+        </div>
+
+        <div class="product-card">
+            <img src="https://superblog.supercdn.cloud/site_cuid_clr6oh1no0006rmr89yhkxgu8/images/various-sport-equipments-generative-ai-1706958639790-compressed.jpg" alt="Laptop">
+            <h2>sports product 6</h2>
+            <p>Price Comparison:</p>
+            <ul>
+                <li>Amazon: $999</li>
+                <li>eBay: $950</li>
+                <li>Best Buy: $970</li>
+            </ul>
+        </div>
+
+        <div class="product-card">
+            <img src="https://superblog.supercdn.cloud/site_cuid_clr6oh1no0006rmr89yhkxgu8/images/various-sport-equipments-generative-ai-1706958639790-compressed.jpg" alt="Laptop">
+            <h2>sports product 7</h2>
+            <p>Price Comparison:</p>
+            <ul>
+                <li>Amazon: $999</li>
+                <li>eBay: $950</li>
+                <li>Best Buy: $970</li>
+            </ul>
+        </div>
+
+        <div class="product-card">
+            <img src="https://superblog.supercdn.cloud/site_cuid_clr6oh1no0006rmr89yhkxgu8/images/various-sport-equipments-generative-ai-1706958639790-compressed.jpg" alt="Laptop">
+            <h2>sports product 8</h2>
+            <p>Price Comparison:</p>
+            <ul>
+                <li>Amazon: $999</li>
+                <li>eBay: $950</li>
+                <li>Best Buy: $970</li>
+            </ul>
+        </div>
+
+        <div class="product-card">
+            <img src="https://superblog.supercdn.cloud/site_cuid_clr6oh1no0006rmr89yhkxgu8/images/various-sport-equipments-generative-ai-1706958639790-compressed.jpg" alt="Laptop">
+            <h2>beauty product 9</h2>
+            <p>Price Comparison:</p>
+            <ul>
+                <li>Amazon: $999</li>
+                <li>eBay: $950</li>
+                <li>Best Buy: $970</li>
+            </ul>
+        </div>
+
+
+    </section>
+
+    <footer>
+        <div id="footer_text1"> download :  <a class="line" href="#">android application </a>| <a class="line" href="#">iOS application</a></div>
+        <div>&copy Copyright Red Pixels Ventures Limited 2023. All rights reserved.</div>
+
+    </footer>
+
+</body>
+</html>
