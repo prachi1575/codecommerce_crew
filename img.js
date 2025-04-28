@@ -1,4 +1,4 @@
-
+//zoomable image
 document.addEventListener('DOMContentLoaded', () => {
     const image = document.querySelector('.zoomable-image');
 
@@ -7,4 +7,3 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 //js file
-
