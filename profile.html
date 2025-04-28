@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f4f4f9;
+            font-family: 'Poppins', sans-serif;
+            color: #333;
+        }
+
+        .container {
+            width: 80%;
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .profile-header {
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .profile-header img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #f1f1f1;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .profile-header input[type="file"] {
+            display: none;
+        }
+
+        .profile-header button {
+            background-color: #007bff;
+            color: white;
+            padding: 8px 15px;
+            font-size: 14px;
+            border-radius: 25px;
+            border: none;
+            cursor: pointer;
+            margin-top: 12px;
+            transition: background-color 0.3s ease;
+        }
+
+        .profile-header button:hover {
+            background-color: #0056b3;
+        }
+
+        .profile-details {
+            margin-top: 20px;
+        }
+
+        .profile-details h3 {
+            font-size: 26px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .profile-details p {
+            font-size: 16px;
+            color: #777;
+        }
+
+        .edit-section {
+            margin-top: 30px;
+        }
+
+        .edit-section button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 18px;
+            font-size: 16px;
+            border-radius: 30px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .edit-section button:hover {
+            background-color: #45a049;
+        }
+
+        .edit-section a {
+            display: block;
+            margin-top: 15px;
+            color: #007bff;
+            font-size: 14px;
+            text-decoration: none;
+        }
+
+        .edit-section a:hover {
+            text-decoration: underline;
+        }
+
+        .profile-details p span {
+            font-weight: bold;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="profile-header">
+            <img id="profilePhoto" src="default-profile.jpg" alt="Profile Photo">
+            <input type="file" id="fileInput" accept="image/*">
+            <button onclick="document.getElementById('fileInput').click();">Change Profile Picture</button>
+        </div>
+
+        <div class="profile-details">
+            <h3 id="username">John Doe</h3>
+            <p><span>Email:</span> <span id="useremail">johndoe@example.com</span></p>
+        </div>
+
+        <div class="edit-section">
+            <button onclick="editProfile()">Edit Profile</button>
+            <a href="logout.html">Logout</a>
+        </div>
+    </div>
+
+    <script>
+        // Load user data from localStorage
+        window.onload = function() {
+            const currentUser = JSON.parse(localStorage.getItem('currentUser'));
+            if (currentUser) {
+                // Display user's name and email
+                document.getElementById('username').textContent = currentUser.fullname;
+                document.getElementById('useremail').textContent = currentUser.email;
+
+                // If a profile photo exists in localStorage, display it
+                const storedProfilePhoto = localStorage.getItem('profilePhoto');
+                if (storedProfilePhoto) {
+                    document.getElementById('profilePhoto').src = storedProfilePhoto;
+                }
+            } else {
+                alert('User not logged in!');
+                window.location.href = 'login1.html'; // Redirect to login page if no user data
+            }
+        };
+
+        // Change profile picture and update localStorage
+        document.getElementById('fileInput').addEventListener('change', function(e) {
+            const file = e.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onloadend = function() {
+                    const profilePhotoURL = reader.result;
+                    document.getElementById('profilePhoto').src = profilePhotoURL;
+                    localStorage.setItem('profilePhoto', profilePhotoURL); // Save the new profile photo in localStorage
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+
+        // Function to allow the user to edit their profile
+        function editProfile() {
+            alert('Edit profile functionality not implemented in this demo!');
+        }
+    </script>
+
+</body>
+</html>
