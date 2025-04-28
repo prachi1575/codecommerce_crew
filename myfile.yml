@@ -1,19 +1,85 @@
-﻿cat > .github/workflows/welcome.yml <<EOF
-name: Welcome Workflow
+﻿project:
+  name: CODECOMMERCE_CREW
+  description: >
+    EPRICEE.COM is a web-based platform for comprehensive product price comparison
+    across categories like electronics, fashion, home appliances, and beauty products.
+    It aggregates pricing information from popular e-commerce sites including Amazon,
+    Flipkart, Myntra, and Croma.
 
-on:
-  issues: none as of now
-    types:
-      - opened
-  pull_request:
-    types:
-      - opened
+  version: 1.0.0
+  license: MIT
+  repository: https://github.com/prachi1575/codecommerce_crew
 
-jobs:
-  welcome:
-    runs-on: windows 11 or new
+author:
+  name: Prachi Dhawan
+  email: Prachi1575.becse24@chitkara.edu.in
+  github: https://github.com/prachi1575
 
-    steps:
-      - name: Greet the user
-        run: echo "Welcome to the repository! 🎉"
-EOF
+Contributors:
+name: Prabhsimran Kaur
+email: Prabhsimran1572.becse24@chitkara.edu.in
+github: https://github.com/PrabhsimranKaur11
+
+name: Prachi Dudeja
+email: Prachi1576.becse24@chitkara.edu.in
+github: https://github.com/Prachi-Dudeja
+
+name: Prashasti
+email: Prashasti1584.becse24@chitkara.edu.in
+github: https://github.com/PrashastiS2605
+
+technologies:
+  frontend:
+    - HTML5
+    - CSS3
+    - JavaScript (Vanilla)
+  backend:
+    - Python (optional for future API integrations)
+
+structure:
+  pages:
+    - index.html
+    - about.html
+    - cart.html
+    - feedback.html
+    - electronics.html
+    - fashion.html
+    - home-appliances.html
+    - beauty.html
+    - service.html
+    - search1.html
+  assets:
+    images:
+      - assets/images/hero1.png
+      - assets/images/fashion.jpg
+      - assets/images/electronics.jpg
+      - assets/images/beauty.jpeg
+      - assets/images/home_appliances.jpeg
+    stylesheets:
+      - assets/css/button.css
+      - assets/css/electric.css
+      - assets/css/fashion.css
+      - assets/css/heading.css
+      - assets/css/hero.css
+      - assets/css/homea.css
+      - assets/css/img.css
+    scripts:
+      - assets/js/change.js
+      - assets/js/hero.js
+      - assets/js/img.js
+
+features:
+  - Price comparison across multiple online stores.
+  - User-friendly interface for browsing categories.
+  - Dynamic image carousels and interactive buttons.
+  - Lightweight and fast-loading pages.
+  - Responsive design for mobile and desktop devices.
+
+deployment:
+  platform: GitHub Pages
+  build: Static hosting (No server-side components)
+
+metadata:
+  created: 2024-04-15
+  last_updated: 2025-04-29
+  status: Active
