@@ -1,1 +1,2 @@
 # codecommerce_crew
+E pricee.com is an e commercial website which compares the prices from different e commercial websites and then helps you to make a smart purchase. In today's busy world the two most important things are time and money and e pricee .com helps you to save both of them.
