@@ -1,0 +1,37 @@
+.nav-container {
+    display: flex;
+    gap: 20px;
+  }
+
+  .nav-button {
+    position: relative;
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 10px 15px;
+    padding-top: 50px;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+
+  .nav-button:hover {
+    color: #007bff;
+    transform: scale(1.1);
+  }
+
+  .nav-button::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background: #007bff;
+    transition: width 0.3s ease;
+  }
+
+  .nav-button:hover::before {
+    width: 100%;
+  }
