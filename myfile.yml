@@ -1,6 +1,19 @@
-﻿version: "1.0"
-services:
-  app:
-    image: my-app:latest
-    ports:
-      - "80:80"
+﻿cat > .github/workflows/welcome.yml <<EOF
+name: Welcome Workflow
+
+on:
+  issues: none as of now
+    types:
+      - opened
+  pull_request:
+    types:
+      - opened
+
+jobs:
+  welcome:
+    runs-on: windows 11 or new
+
+    steps:
+      - name: Greet the user
+        run: echo "Welcome to the repository! 🎉"
+EOF
