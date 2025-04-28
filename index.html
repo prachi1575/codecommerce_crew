@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="stylesheet" href="logo1.css">
+ <link rel="stylesheet" href="menu.css">
+ <link rel="stylesheet" href="hero.css">
+ <link rel="stylesheet" href="searchbar.css">
+ <link rel="stylesheet" href="nav.css">
+ <link rel="stylesheet" href="main1.css">
+ <link rel="stylesheet" href="sear.css">
+ <link rel="stylesheet" href="media.css">
+ <link rel="stylesheet" href="i.css">
+   
+</head>
+<body>
+ 
+    <header>
+        <nav>
+         <!-- Menu Button -->
+    <button onclick="toggleMenu()" 
+    style="background-color: #2d2b2f; color: white; border: none; font-size: 1.5rem; padding: 12px 25px; font-weight: bold; cursor: pointer; z-index: 1000; position: absolute; top: 10px; left: 20px;; transition: transform 0.3s, background 0.3s;">
+☰ 
+</button>
+
+<!-- Side Menu -->
+<div id="sideMenu" 
+ style="position: fixed; top: 0; left: -300px; width: 300px; height: 100%; background: linear-gradient(135deg, #333, #555); color: white; display: flex; flex-direction: column; align-items: center; padding: 30px; box-shadow: 2px 0 15px rgba(0, 0, 0, 0.3); transition: transform 0.5s ease;">
+<!-- Close Button -->
+<button onclick="toggleMenu()" 
+        style="align-self: flex-end; background: none; border: none; color: white; font-size: 24px; cursor: pointer; margin-bottom: 20px;">
+    ✕
+</button>
+
+<h2 style="margin-bottom: 30px; font-size: 24px;">Menu</h2>
+<a href="ddd.html" 
+   style="color: white; text-decoration: none; margin: 15px 0; font-size: 18px; padding: 10px 20px; border-radius: 10px; background: transparent; transition: background 0.3s, color 0.3s;"
+   onmouseover="this.style.background='#0078d7'; this.style.color='white';"
+   onmouseout="this.style.background='transparent'; this.style.color='white';">
+    purchase
+</a>
+<a href="index.html" 
+   style="color: white; text-decoration: none; margin: 15px 0; font-size: 18px; padding: 10px 20px; border-radius: 10px; background: transparent; transition: background 0.3s, color 0.3s;"
+   onmouseover="this.style.background='#0078d7'; this.style.color='white';"
+   onmouseout="this.style.background='transparent'; this.style.color='white';">
+    Home
+</a>
+<a href="about.html" 
+   style="color: white; text-decoration: none; margin: 15px 0; font-size: 18px; padding: 10px 20px; border-radius: 10px; background: transparent; transition: background 0.3s, color 0.3s;"
+   onmouseover="this.style.background='#0078d7'; this.style.color='white';"
+   onmouseout="this.style.background='transparent'; this.style.color='white';">
+    About
+</a>
+<a href="service.html" 
+   style="color: white; text-decoration: none; margin: 15px 0; font-size: 18px; padding: 10px 20px; border-radius: 10px; background: transparent; transition: background 0.3s, color 0.3s;"
+   onmouseover="this.style.background='#0078d7'; this.style.color='white';"
+   onmouseout="this.style.background='transparent'; this.style.color='white';">
+    Contact
+</a>
+<a href="feedback.html" 
+   style="color: white; text-decoration: none; margin: 15px 0; font-size: 18px; padding: 10px 20px; border-radius: 10px; background: transparent; transition: background 0.3s, color 0.3s;"
+   onmouseover="this.style.background='#0078d7'; this.style.color='white';"
+   onmouseout="this.style.background='transparent'; this.style.color='white';">
+    feedback
+</a>
+<a href="search1.html" 
+   style="color: white; text-decoration: none; margin: 15px 0; font-size: 18px; padding: 10px 20px; border-radius: 10px; background: transparent; transition: background 0.3s, color 0.3s;"
+   onmouseover="this.style.background='#0078d7'; this.style.color='white';"
+   onmouseout="this.style.background='transparent'; this.style.color='white';">
+    Search
+</a>
+<a href="profile.html" 
+   style="color: white; text-decoration: none; margin: 15px 0; font-size: 18px; padding: 10px 20px; border-radius: 10px; background: transparent; transition: background 0.3s, color 0.3s;"
+   onmouseover="this.style.background='#0078d7'; this.style.color='white';"
+   onmouseout="this.style.background='transparent'; this.style.color='white';">
+    Profile
+</a>
+</div>
+
+<script>
+function toggleMenu() {
+    const sideMenu = document.getElementById('sideMenu');
+    const currentLeft = sideMenu.style.left;
+
+    // Toggle the menu visibility
+    if (currentLeft === '0px') {
+        sideMenu.style.left = '-300px';
+    } else {
+        sideMenu.style.left = '0px';
+    }
+}
+</script>
+        </nav>
+        <div class="typing-container">E_pricee</div>
+        <nav>
+            <ul>
+                <li>   
+                    <div class="search-container">
+                        
+                            <input type="text" id="search-input" class="search-input" name="q" placeholder="Type to search...">
+                            <button type="submit" class="search-button" id="searchButton" aria-label="Search">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001a1 1 0 0 0 .196 1.316l3.85 3.85a1 1 0 0 0 1.415-1.415l-3.85-3.85a1 1 0 0 0-1.316-.196zm-5.742 1.606a5.5 5.5 0 1 1 0-11 5.5 5.5 0 0 1 0 11z"/>
+                                </svg>
+                            </button>
+                        
+                    </div>
+                </li>
+                <li><a href="login1.html" id="dynamicLink" class="nav-button" class="change">Login</a></li>
+                <li><a href="electronics.html" class="nav-button" class="electric-button">Electronics</a></li>
+                <li><a href="fashion.html" class="nav-button" class="fashion-button">Fashion</a></li>
+                <li><a href="home-appliances.html" class="nav-button" class="home-appliance-button">Home</a></li>
+                <li><a href="beauty.html" class="nav-button">Beauty</a></li>
+              
+            </ul>
+        </nav>
+    </header>
+   
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="dropdown-content">
+            <button onclick="performSearch('amazon')">Amazon</button>
+            <button onclick="performSearch('flipkart')">Flipkart</button>
+            <button onclick="performSearch('myntra')">Myntra</button>
+            <button onclick="performSearch('meesho')">Meesho</button>
+        </div>
+    
+         <!-- Results Section -->
+  
+        <div class="slider">
+            <!-- Slides -->
+            <div class="slide active" style="background-image: url('hero6.jpg');"></div>
+            <div class="slide" style="background-image: url('hero3.png');"></div>
+            <div class="slide" style="background-image: url('hero5.png');"></div>
+    
+            <!-- Navigation Arrows -->
+            <button class="arrow left" onclick="prevSlide()">&#10094;</button>
+            <button class="arrow right" onclick="nextSlide()">&#10095;</button>
+    
+            <!-- Dots -->
+            <div class="dots">
+                <div class="dot active" onclick="goToSlide(0)"></div>
+                <div class="dot" onclick="goToSlide(1)"></div>
+                <div class="dot" onclick="goToSlide(2)"></div>
+            </div>
+        </div>
+    
+
+    </section>
+
+    <!-- Categories Section -->
+    <section id="categories">
+        <h2>Shop by Category</h2>
+        <div class="category-grid">
+            <div class="category-card">
+                    <img src="electronics.jpg" alt="Electronics">
+                    <a href="electronics.html">Electronics</a>
+            </div>
+            <div class="category-card">
+                <img src="fashion.jpg" alt="Fashion">
+                <a href="fashion.html">Fashion</a>
+            </div>
+            <div class="category-card">
+                <img src="home appliences.jpeg" alt="Home Appliances">
+                <a href="home-appliances.html">Home Appliances</a>
+            </div>
+            <div class="category-card">
+                <img src="beauty.jpeg" alt="Beauty">
+                <a href="beauty.html">Beauty</a>
+            </div>
+            <div class="category-card">
+                <img src="sports.jpeg" alt="Beauty">
+                <a href="sports.html">Sports section</a>
+            </div>
+        </div>
+       
+    </section>
+    <h2 class="h2">Most Veiwed Products</h2>
+    <section class="product-container">
+        
+        
+        <div class="product-card">
+            
+            
+            <img src="https://m.media-amazon.com/images/I/31Q14qzdoZL.SY445_SX342_QL70_FMwebp.jpg" alt="Laptop"  class="zoomable-image">
+            <h2>Iphone 15</h2>
+            <p>Price Comparison:</p>
+            <ul>
+                <li> <a href="https://www.amazon.in/Apple-iPhone-15-128-GB/dp/B0CHX2F5QT"> Amazon : ₹65,900</a></li>
+                <li><a href="https://www.flipkart.com/apple-iphone-15-black-128-gb/p/itm6ac6485515ae4">Flipkart : ₹58,249</a></li>
+                <li><a href="https://www.croma.com/apple-iphone-15-128gb-blue-/p/300684?srsltid=AfmBOooUsQ8TYHodcxA1OXEWt-wGzyo2I79EtomAOVaPk9vbejxtapur">Croma : ₹66,190</a></li>
+            </ul>
+        </a>
+        </div>
+
+        
+        <div class="product-card">
+           
+            <img src="https://m.media-amazon.com/images/I/61+PPFl0hfL.SY741.jpg" alt="Smartphone" class="zoomable-image">
+            <h2>Avengers Men Graphic Print Casual Jacket</h2>
+            <p>Price Comparison:</p>
+            <ul>
+                <li><a href="https://www.amazon.in/Souled-Store-Avengers-Endgame-Quantum/dp/B084936HPK/ref=sr_1_9?dib=eyJ2IjoiMSJ9.1-Og0kvKZIsxiPyLChlM-a66q_31mrpXqh0Zrtt19X_abAoPFSA8kwOKqBMKXRuWRP0A58fRmhrZP5o7EMQXxHKJwod6j8DoliSQ1Io8DPkFwQkwUSZJuwXWRVFq_8RsYE3VZkiOb-g8Sg-io0m5NnBqeebg6ikTQml4BmAJKa-nqLZxcwOcgKbSEuJJGyA813iBDE0E9_nZHend33wK0aXKxjD2CTx4fDGJNhkpDyf0yjMN_efXxQivOjzZvneH8EitE6JeLCWKA1rLGISsv1pk-8j6zrd4O7g3WL2QA.dSg7KLeaazFdPxQf1c8RxiIgHov_gqZjCTTcENoC2qo&dib_tag=se&keywords=the+souled+store+jacket&nsdOptOutParam=true&qid=1732645676&sr=8-9">Amazon:  ₹1,999</a></li>
+                <li><a href="https://www.flipkart.com/souled-store-full-sleeve-graphic-print-men-jacket/p/itmf45bb5fd49169?pid=JCKFYG8RFSJMZ9XF&lid=LSTJCKFYG8RFSJMZ9XFFA5ZN8&marketplace=FLIPKART&q=souled+store+jackets&store=clo%2Fqvw%2Fz0g%2Fjbm&srno=s_1_8&otracker=search&otracker1=search&fm=Search&iid=ce862c51-d511-4ffb-a3f4-6b877e519571.JCKFYG8RFSJMZ9XF.SEARCH&ppt=sp&ppn=sp&qH=b3df6b05ebca61b5">Flipkart:  ₹1,999</a></li>
+                <li><a href="https://www.myntra.com/jackets/the+souled+store/the-souled-store-unisex-avengers-endgame-quantum-realm-jacket/16499494/buy?utm_source=dms_google&utm_medium=pmax_cpc&utm_campaign=dms_google_pmax_cpc_Myntra_SOK_KPI_Traffic_New&keyword=&matchtype=&target=&placement=&gad_source=1&gclid=Cj0KCQiAgJa6BhCOARIsAMiL7V_ub0uckHiZOEhXxYOTOQu49uBeFv_g02Hxo-DdDJp6FJdYdZD6js0aApa2EALw_wcB">Myntra : ₹2000</a></li>
+            </ul>
+        </a>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product-card">
+            
+            <img src="https://m.media-amazon.com/images/I/61lLjrvDEkL.SX679.jpg" alt="Headphones" class="zoomable-image">
+            <h2> Iphone 16</h2>
+            <p>Price Comparison:</p>
+            <ul>
+                <li><a href="https://www.amazon.in/Apple-iPhone-16-128-GB/dp/B0DGHZWBYB/ref=sr_1_1_sspa?crid=1UQ5CAO9W0TPT&dib=eyJ2IjoiMSJ9.yNq9aTafEy3hOFdNwblVwzIhPXBTPf3vjECkGskYyJWoDN1eUD03Ab98CWUlGPmEiR4Q7Tv9CKUVTi25gAsYPeCWPFQ_azyajVgk9jLV4YSmpzpj_ycrVYcsCa3HYZgXAoxak6XYNBaORJqKoTDoFxX1-8zDLGpnYDOVnlmp-BazTYTbVrV1OgoKwMGvGl7Ph8tPYFRtqxasHCa4Y20oHev8t6G9VtRQQmNG6ARPDsw.wgJ5fQgs912xJuJJ34N5ag4zc3CzT0oZqL1QuVW5eJI&dib_tag=se&keywords=iphone+16&qid=1732646387&sprefix=iphone+16%2Caps%2C484&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1">Amazon: ₹77,900</a></li>
+                <li><a href="https://www.flipkart.com/apple-iphone-16-black-128-gb/p/itmb07d67f995271?pid=MOBH4DQFG8NKFRDY&lid=LSTMOBH4DQFG8NKFRDYKOOGZ6&marketplace=FLIPKART&q=iphone%2016&sattr[]=color&sattr[]=storage&st=storage">Flipkart: ₹79,900</a></li>
+                <li><a href="https://www.croma.com/apple-iphone-16-128gb-black-/p/309621?utm_source=google&utm_medium=ps&utm_campaign=Sok_Pmax_Black_Friday_Sale&gad_source=1&gclid=Cj0KCQiAgJa6BhCOARIsAMiL7V9lA1ATZ598SOUCrS3o94LL_D-CZOAGiNCvo6rPVdo9v6mOIfV6EUYaAngREALw_wcB">Croma : ₹79,900</a></li>
+            </ul>
+        </a>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="product-card">
+            
+            <img src="https://media-ik.croma.com/prod/https://media.croma.com/image/upload/v1712137916/Croma%20Assets/Gaming/Gaming%20Consoles/Images/305987_tlfvzh.png?tr=w-640" alt="Smartwatch" class="zoomable-image">
+            <h2>Sony PlayStation®5 Digital Edition (slim)</h2>
+            <p>Price Comparison:</p>
+            <ul>
+                <li><a href="https://www.amazon.in/Sony-PlayStation%C2%AE5-Digital-Edition-slim/dp/B0CY5QW186/ref=sr_1_1?crid=1CEBCRVYNJDRK&dib=eyJ2IjoiMSJ9.pFhgCqcURNHp7Ghh6tpkbnSJFucgt_ADN79fXWUPoVReYu0R4T-FmmhWFBrxHZu8mz3VswDx0ubDyTcVHXTkE4EJVds5caZ46o5YP6orp0PHujjxXvMJ2wlBbk2IyQFav_Qh-botq2JN61G8X58mmuWLKdKx7MbS3NIjDLFmcE4nKTncLoI3_ByTflkdyoIoFnFp_14OY1Y0z-o6LoP3mTKZL0ZS-HOohaNkkcqjzl4.WrJ03x4gYDint9Kk84zte4QuSDkJuDWk7AwK2iVWZz4&dib_tag=se&keywords=Sony%2BPS5%2BSlim%2BDigital%2BEdition%2BConsole&nsdOptOutParam=true&qid=1732646859&sprefix=sony%2Bps5%2Bslim%2Bdigital%2Bedition%2Bconsole%2Caps%2C298&sr=8-1&th=1">Amazon: ₹37,490</a></li>
+                <li><a href="https://www.flipkart.com/sony-playstation5-digital-slim-cfi-2008b01x-1-tb/p/itm87ac7d8e29d05?pid=GMCGZCYP4NEKPPYM&lid=LSTGMCGZCYP4NEKPPYMASPKUN&marketplace=FLIPKART&q=Sony+PS5+Slim+Digital+Edition+Console&store=4rr%2Fx1m%2Fogz&spotlightTagId=TrendingId_4rr%2Fx1m%2Fogz&srno=s_1_1&otracker=search&otracker1=search&fm=Search&iid=2c3d0d6d-a2ee-4270-acfc-597152b642ac.GMCGZCYP4NEKPPYM.SEARCH&ppt=sp&ppn=sp&ssid=1w7s5zq3jk0000001732646872432&qH=8ba85639b3bc66cf">Flipkart: ₹37,490</a></li>
+                <li><a href="https://www.croma.com/sony-ps5-slim-digital-edition-console/p/305987?utm_source=google&utm_medium=ps&utm_campaign=Sok_Pmax_Black_Friday_Sale&gad_source=1&gclid=Cj0KCQiAgJa6BhCOARIsAMiL7V8AIvZXVHhuEAvCdNIu72GNpTCGzxmbHzYb5GsDnbDg0yUTDgnT1lwaAuZaEALw_wcB">Croma : ₹37,490</a></li>
+            </ul>
+        </a>
+        </div>
+
+        <div class="product-card">
+           <img src="https://m.media-amazon.com/images/I/81b6QYG-JuL.SX569.jpg" alt="" class="zoomable-image">
+            <h2>Nike Men Regular Track Pant</h2>
+            <p>Price Comparison:</p>
+            <ul>
+                <li><a href="https://www.amazon.in/Nike-Cuffed-NFS-CZ2855-063-S-DK-Heather-White/dp/B0BF4NXVM8/ref=sr_1_1?crid=2NMUFMCGFMD19&dib=eyJ2IjoiMSJ9.qa8k6owXnwiWkvZYB1-gx7XBs7SpZnOSKNOqv7eeXt1smK5K0pFK0LPharVKZUPUZBhIAJnAqNNfbMN4y7z9HYmIYIuhXXIeVdNKP22cbQtQa1qh5x3seqmOJTfCgbGpgLY_H5JMvcOS3aMKB29dF7vjOMHJN4Y0zp2vra-lGHvtHzTbXQDBcubx23rfpxIeKacLigDYNnukRPILMjsqR6Mx2ywGaMkwVSBBtq7Mn1zLAiiCltyXbFm9z3Cr9rJhdAWONLJNd0wOlmF0lguT_6NEe5xz1dfkTuIB46pSHp4.5pea4Z62PruDAU_6li7B2Pnn8IeNVxrsNJ1uKfdwEo4&dib_tag=se&keywords=nike+grey+sweatpants&nsdOptOutParam=true&qid=1732647996&sprefix=NIKE+GREY+SWEA%2Caps%2C236&sr=8-1">Amazon: ₹1,434</a></li>
+                <li><a href="https://www.flipkart.com/nike-sportswear-club-solid-men-grey-track-pants/p/itm3c835647804a4?pid=TKPFGNG3E9Z5R6FJ&lid=LSTTKPFGNG3E9Z5R6FJOYMFBQ&marketplace=FLIPKART&q=nike+men+track+pants&store=clo%2Fvua%2Fjlk%2F6ql&srno=s_1_14&otracker=search&otracker1=search&fm=Search&iid=e47d0cac-645f-4b68-a3a1-2a229e6ac67e.TKPFGNG3E9Z5R6FJ.SEARCH&ppt=sp&ppn=sp&ssid=zb9fxtjxls0000001732648546072&qH=af0eef06e7bbe2c7">Flipkart: ₹2,171</a></li>
+                <li><a href="https://www.ajio.com/nike-men-club-knit-joggers/p/469707204_blackgrey?srsltid=AfmBOopKd3VGck8YUPSXqBDZjIgvwZ7ydEBZZ3mA5qAzoAaYSTZIV2untIk#gmf">Ajio : ₹2,180</a></li>
+            </ul>
+        </a>
+        </div>
+
+        <div class="product-card">
+            
+                <img src="https://m.media-amazon.com/images/I/71Ytv8ec8qL.SX679.jpg" alt="Laptop" class="zoomable-image">
+                <h2>Apple Watch Series 10 </h2>
+                <p>Price Comparison:</p>
+                <ul>
+                    <li><a href="https://www.amazon.in/Apple-Watch-Cellular-Titanium-Starlight/dp/B0DGJ7LM79/ref=sr_1_2_sspa?crid=2UKMP33APGZN0&dib=eyJ2IjoiMSJ9.a1PolKLaHluuYpWOfpe4N2qis7mMTKsnOdmJnvPPE7Pa5yg5ffUzfytXGEt7GEXlpUuLOVTxz8Wh56a5nbpFBBLh5gK-DUAWp8UnjjNl4WEo1y7d8tFTAvK4S_6mRPlg4AT_R4ViWNtSZKbpsgL5MufX7ev2sIFICW3FmYvYfBnSGsmhtnHd63blQmWjfcjwSCNAWl1URbMTa9hbmDdGYy7_wQ1842vxbCC0a5tPIJY.9bGneHTLIFn0-FTYqB7vHpfZhdvcux5rGg35rQwYaqI&dib_tag=se&keywords=apple%2Bwatch%2Bseries%2B10&nsdOptOutParam=true&qid=1732649066&sprefix=apple%2Bwatch%2Caps%2C230&sr=8-2-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1">Amazon: ₹84,900</a></li>
+                    <li><a href="https://www.flipkart.com/apple-watch-series-10-gps-cellular-46mm-gold-titanium-starlight-sport-band/p/itm86ffdf2baaece?pid=SMWH4JBWS7NRNX8K&lid=LSTSMWH4JBWS7NRNX8KSXJJPE&marketplace=FLIPKART&q=Apple+Watch+Series+10+GPS+%2B+Cellular+46mm+Gold+Titanium+Case+with+Starlight+Sport+Band+-+S%2FM&store=ajy%2Fbuh&srno=s_1_17&otracker=search&otracker1=search&fm=Search&iid=8acc37af-9550-43be-b1e0-1f10b319fdba.SMWH4JBWS7NRNX8K.SEARCH&ppt=sp&ppn=sp&ssid=pfjmu404jk0000001732649087327&qH=614a6e607e9ae7ea">Flipkart: ₹84,900</a></li>
+                    <li><a href="https://www.croma.com/apple-watch-series-10-gps+cellular-with-sport-band-s-m-46mm-retina-ltpo3-oled-display-gold-titanium-case-/p/309261"> Croma : ₹84,900</a></li>
+                </ul>
+                     
+            </a>
+                   </div>
+
+        <div class="product-card">
+            
+            <img src="https://m.media-amazon.com/images/I/71jG+e7roXL.AC_UY327_FMwebp_QL65.jpg" alt="Laptop" class="zoomable-image">
+            <h2>Macbook Air Apple M1</h2>
+            <p>Price Comparison:</p>
+            <ul>
+                <li><a href="https://www.amazon.in/s?k=macbook+m1&crid=3RACN688PL6ZL&sprefix=macbook+%2Caps%2C226&ref=nb_sb_ss_ts-doa-p_1_8">Amazon : ₹59,990</a></li>
+                <li><a href="https://www.flipkart.com/apple-2020-macbook-air-m1-8-gb-256-gb-ssd-mac-os-big-sur-mgn63hn-a/p/itm3c872f9e67bc6?pid=COMFXEKMGNHZYFH9&lid=LSTCOMFXEKMGNHZYFH9P56X45&marketplace=FLIPKART&q=macbook+m1&store=6bo%2Fb5g&srno=s_1_1&otracker=search&otracker1=search&fm=Search&iid=62f36558-3bbd-4b75-8b6e-7ca607fc9ee7.COMFXEKMGNHZYFH9.SEARCH&ppt=sp&ppn=sp&ssid=nd5of8x5yo0000001732649509404&qH=fa9131f68c0c7b2e">Flipkart : ₹73,990</a></li>
+                <li><a href="https://www.croma.com/apple-macbook-air-2020-m1-13-3-inch-8gb-256gb-macos-big-sur-space-grey-/p/256711"></a>Croma : ₹72,590</li>
+            </ul>
+        </a>
+        </div>
+
+        <div class="product-card">
+            <
+            <img src="https://m.media-amazon.com/images/I/51QmWm0JgcL.AC_UL480_FMwebp_QL65.jpg" alt="Laptop" class="zoomable-image">
+            <h2>Dyson Airwrap </h2>
+            <p>Price Comparison:</p>
+            <ul>
+                <li><a href="https://www.amazon.in/Dyson-400736-01-AirwrapTM-Complete-Long/dp/B0C6DHV6HL/ref=sr_1_1?crid=29WH5J16LZYSZ&dib=eyJ2IjoiMSJ9.So1scTogrLyHNtHi753_LtK3u6Xiv6gEGanno8VeLLeyOwSVxT2_RdjjKjZj9b6h-SDfj3ACvUsSdyarp0p2QyizzwbKYNRiG9lAuGEfc95Puto31PCoPQ9NfVzmuI7Fhw-7rnEPJPzSvOpsLtcE2ztHdPRBisDNW642cAF-Ge_deuF27RW--d6a6GDoAErfwGbneMgXl_FLgkKkhXz9HDproafgTLhh7ZCwy474-9cwEEBpGyrd5QHXs7NjFfoU0OCKOKafhBubPcdw-Vz-iA6E0sS-_SGDmz71g5n9Ki4.fr8li211XWsIphBSbnw27nn36OXp_qU-zd9T29VXIzc&dib_tag=se&keywords=dyson+8+in+1&nsdOptOutParam=true&qid=1732683116&s=hpc&sprefix=dyson+8+in+1%2Chpc%2C219&sr=1-1"></a>Amazon: ₹43,899</li>
+                <li><a href="https://www.myntra.com/multi-styler/dyson/dyson-airwrap-id-multi-styler--dryer---strawberry-bronze/30857343/buy?utm_source=perf_google_Pmax_perfbpc&utm_medium=perf_google_Pmax&utm_campaign=dms_google_pmax_cpc_Myntra_PMax_BPC_Rising_Star_Feed_Only_SOK_New&keyword=&matchtype=&target=&placement=&gad_source=4&gclid=Cj0KCQiAgJa6BhCOARIsAMiL7V90GCFMhCpFiWoh9YXih72nl41f2D89nJfV6Qxg0u3U1PU8gv-xtVUaAhmQEALw_wcB">Myntra : ₹ 45,900</a></li>
+                <li><a href="https://www.croma.com/dyson-airwrap-8-in-1-hair-styler-with-coanda-airflow-cold-shot-blue-blush-/p/301335?utm_source=google&utm_medium=ps&utm_campaign=Sok_Pmax_Black_Friday_Sale&gad_source=1&gclid=Cj0KCQiAgJa6BhCOARIsAMiL7V8rjwCbmVGMPLP722lwUTLdj38e6sceSLwQzr7wgUaXySUaegJ41z8aAl7lEALw_wcB">Croma : ₹43,900</a></li>
+            </ul>
+        </a>
+        </div>
+
+        <div class="product-card">
+            
+            <img src="https://media-ik.croma.com/prod/https://media.croma.com/image/upload/v1725959431/Croma%20Assets/Communication/Mobiles/Images/309728_0_yo4kc1.png?tr=w-640" alt="Laptop" class="zoomable-image">
+            <h2>Apple iPhone 16 Pro (128GB, Natural Titanium)</h2>
+            <p>Price Comparison:</p>
+            <ul>
+                <li><a href="https://www.apple.com/in/iphone-16-pro/">Apple : ₹119,900   </a></li>
+                <li><a href="https://www.flipkart.com/apple-iphone-16-pro-white-titanium-128-gb/p/itm50f720fdcec51"></a>Flipkart: ₹119,900 </li>
+                <li><a href="https://www.croma.com/apple-iphone-16-pro-128gb-natural-titanium-/p/309728?utm_source=google&utm_medium=ps&utm_campaign=Sok_Pmax_Black_Friday_Sale&gad_source=1&gclid=Cj0KCQiAgJa6BhCOARIsAMiL7V-8yRoh7ug4N1Wf7T0qrY4EHX9kwOUIUHL0nN8qX2DnLyratRp9zQEaAgPPEALw_wcB">Croma : ₹119,900</a></li>
+            </ul>
+        </a>
+        </div>
+
+        <div class="product-card">
+            
+            <img src="https://m.media-amazon.com/images/I/71snlkNDRBL.SX679.jpg" alt="Laptop" class="zoomable-image">
+            <h2>Yonex Nanoray Light 18i </h2>
+            <p>Price Comparison:</p>
+            <ul>
+                <li><a href="https://amazon.in/Yonex-Nanoray-Light-18i-Badminton/dp/B07BY89TQY/ref=asc_df_B07BY89TQY/?tag=googleshopdes-21&linkCode=df0&hvadid=709855563009&hvpos=&hvnetw=g&hvrand=14815951899301413933&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9302548&hvtargid=pla-653510163720&psc=1&mcid=80919a1038c63dd9b33d3f2559643d03&gad_source=1">Amazon: ₹2,090</a></li>
+                <li><a href="https://www.flipkart.com/yonex-nanoray-light-18i-black-strung-badminton-racquet-weight-77-g-tension-30-lbs/p/itm441bf79a97749">Flipkart: ₹1,699</a></li>
+                <li><a href="https://9sportz.com/store/product/39/yonex-nanoray-light-18i-graphite-badminton-racquet-with-free-full-cover-77-grams-30-lbs-tension-black"> 9SPORTZ : ₹1749</a></li>
+            </ul>
+        </a>
+
+        </div>
+
+        
+        <div class="product-card">
+           
+            <img src="https://m.media-amazon.com/images/I/81njZjDqc6L.SX679.jpg" alt="Smartphone" class="zoomable-image">
+            <h2>Samsung Galaxy S24 Ultra 5G</h2>
+            <p>Price Comparison:</p>
+            <ul>
+                <li><a href="https://www.amazon.in/Samsung-Smartphone-Titanium-Storage-_without/dp/B0CT59XVRD/ref=asc_df_B0CT5BKF4C/?tag=googleshopdes-21&linkCode=df0&hvadid=709962856229&hvpos=&hvnetw=g&hvrand=638683284513219628&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9302548&hvtargid=pla-2282976225353&mcid=ba180d5b701d3c56af7a4ca209cfd385&gad_source=1&th=1">Amazon : ₹1,12,699</a></li>
+                <li><a href="https://www.croma.com/samsung-galaxy-s24-ultra-5g-12gb-ram-256gb-titanium-gray-/p/303838?utm_source=google&utm_medium=ps&utm_campaign=Sok_Standard_Shopping_Smartphones_Android&gad_source=1&gclid=Cj0KCQiAgJa6BhCOARIsAMiL7V8OB-A3B-1INQJKpyIwLTO4T5OCxsil124ql9qQerT9KNxhZtcaOYAaAlbdEALw_wcB">Croma : ₹1,21,999</a></li>
+                <li><a href="https://www.flipkart.com/samsung-galaxy-s24-ultra-5g-titanium-gray-512-gb/p/itm463827d6eb2be">Flipkart : ₹1,31,999</a></li>
+            </ul>
+        </a>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product-card">
+            
+            <img src="https://media-ik.croma.com/prod/https://media.croma.com/image/upload/v1732187821/Croma%20Assets/Computers%20Peripherals/Laptop/Images/307519_0_uu7fgs.png?tr=w-640" alt="Headphones" class="zoomable-image">
+            <h2>Lenovo LOQ AMD Ryzen 7 </h2>
+            <p>Price Comparison:</p>
+            <ul>
+                <li><a href="https://www.amazon.in/Lenovo-7435HS-300Nits-Graphics-83JC0046IN/dp/B0D78PBRSP/ref=pd_lpo_d_sccl_2/261-6838613-3560938?pd_rd_w=BnqPn&content-id=amzn1.sym.e0c8139c-1aa1-443c-af8a-145a0481f27c&pf_rd_p=e0c8139c-1aa1-443c-af8a-145a0481f27c&pf_rd_r=6VT5KRBR8487Z5AFCRQB&pd_rd_wg=ajilT&pd_rd_r=c53b1ccc-0c82-4646-b593-0ff60438fb17&pd_rd_i=B0D78PBRSP&psc=1">Amazon : ₹89,990</a></li>
+                <li><a href="https://www.flipkart.com/lenovo-loq-amd-ryzen-7-octa-core-7435hs-24-gb-512-gb-ssd-windows-11-home-8-graphics-nvidia-geforce-rtx-4060-15arp9-gaming-laptop/p/itm1ca3912e19cb2?pid=COMHFYZ3ZSHR7J5F&lid=LSTCOMHFYZ3ZSHR7J5FVLRZ5E&marketplace=FLIPKART&q=lenovo+loq+4060+&store=search.flipkart.com&srno=s_1_3&otracker=search&otracker1=search&fm=Search&iid=1715defc-8ad7-450c-b650-6de3e71cef65.COMHFYZ3ZSHR7J5F.SEARCH&ppt=sp&ppn=sp&ssid=5qxta0nzcg0000001732684714671&qH=bd2b0738b1a20e23">Flipkart:   ₹91,190 </a></li>
+                <li><a href="https://www.croma.com/lenovo-loq-15arp9-amd-ryzen-7-gaming-laptop-24gb-512gb-ssd-windows-11-home-8gb-graphics-15-6-inch-144-hz-full-hd-ips-display-nvidia-geforce-rtx-4060-ms-office-2021-luna-grey-2-38-kg-/p/307519?srsltid=AfmBOorZgAlateMAV8cUzhuA-cKVyGTCpwCiF7vtMnDcVgZZbFcMGeVj">Croma : ₹90,990</a></li>
+            </ul>
+        </a>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="product-card">
+            
+            <img src="https://media-ik.croma.com/prod/https://media.croma.com/image/upload/v1721048340/Croma%20Assets/Communication/Mobiles/Images/308175_0_marq4l.png?tr=w-640" alt="Smartwatch" class="zoomable-image">
+            <h2>SAMSUNG Galaxy Z Fold6 5G</h2>
+            <p>Price Comparison:</p>
+            <ul>
+                <li><a href="https://www.amazon.in/Samsung-Galaxy-Smartphone-Silver-Storage/dp/B0D83YD1TF?th=1">Amazon : ₹2,00,999</a></li>
+                <li><a href="https://www.croma.com/samsung-galaxy-z-fold6-5g-12gb-ram-1tb-silver-shadow-/p/308175">Croma : ₹188,499</a></li>
+                <li><a href="https://www.samsung.com/in/smartphones/galaxy-z-fold6/buy/?modelCode=SM-F956BZSH&srsltid=AfmBOooH3UvRAWeLoZMzXaTTG_EqBhkplG4DocqPM3s1S80j92Fmih45SOo">Samsung : ₹1,88,499</a></li>
+            </ul>
+        </a>
+        </div>
+
+        <div class="product-card">
+            
+            <img src="https://m.media-amazon.com/images/I/51BGJxYbmCL.SY741.jpg" alt="Laptop" class="zoomable-image">
+            <h2>Men Solid leather Jacket</h2>
+            <p>Price Comparison:</p>
+            <ul>
+                <li><a href="https://www.amazon.in/Leather-Jacket-Black-Biker-Alpha/dp/B0D95QWTGT?source=ps-sl-shoppingads-lpcontext&ref_=fplfs&psc=1&smid=AB9OGMZM58E9J">Amazon :  ₹1,234</a></li>
+                <li><a href="https://www.flipkart.com/storktic-full-sleeve-solid-men-jacket/p/itmdec209e3d07f5?pid=JCKGWXZHS8DGXFPA&lid=LSTJCKGWXZHS8DGXFPAODGD8U&marketplace=FLIPKART&store=clo%2Fqvw%2Fz0g&srno=b_1_14&otracker=browse&fm=organic&iid=701d1950-e0e1-4154-b94d-5db91fabe774.JCKGWXZHS8DGXFPA.SEARCH&ppt=sp&ppn=productListView&ssid=fngx6jjg3k0000001732685548862">Flipkart : ₹1,799</a></li>
+                <li><a href="https://www.meesho.com/leather-jacket-for-boystrending/p/7iuvjl">Meesho: ₹1,115</a></li>
+            </ul>
+        </a>
+        </div>
+
+        <div class="product-card">
+            
+            <img src="https://media-ik.croma.com/prod/https://media.croma.com/image/upload/v1725994738/Croma%20Assets/Entertainment/Headphones%20and%20Earphones/Images/309239_0_eyubie.png?tr=w-640" alt="Laptop" class="zoomable-image">
+            <h2>Apple AirPods Max</h2>
+            <p>Price Comparison:</p>
+            <ul>
+                <li><a href="https://www.croma.com/apple-airpods-max-with-active-noise-cancellation-usb-c-midnight-/p/309239?utm_source=google&utm_medium=ps&utm_campaign=Sok_Pmax_Black_Friday_Sale&gad_source=1&gclid=Cj0KCQiAgJa6BhCOARIsAMiL7V8UCB0Hr7pkgPfuT8-27uJUhVqad-KBjd1Z8peo5KqcZclyoajUQhYaAsTdEALw_wcB">Croma : ₹59,900</a></li>
+                <li><a href="https://www.flipkart.com/apple-airpods-max-bluetooth/p/itm66a49e88f49e5?gclid=Cj0KCQiAgJa6BhCOARIsAMiL7V_V_9ZvUzBVXGcUtldooXiXgwdGUqXnQHcth0NGkCYg811x9B_cvLUaAtnsEALw_wcB&pid=ACCH4JE8QFUUPDWR&lid=LSTACCH4JE8QFUUPDWRJVWFTL&marketplace=FLIPKART&cmpid=content_headphone_20000345881_g_8965229628_gmc_pla&tgi=sem,1,G,11214002,g,search,,657230470975,,,,c,,,,,,,&ef_id=Cj0KCQiAgJa6BhCOARIsAMiL7V_V_9ZvUzBVXGcUtldooXiXgwdGUqXnQHcth0NGkCYg811x9B_cvLUaAtnsEALw_wcB:G:s&s_kwcid=AL!739!3!657230470975!!!g!2219018670422!&gclsrc=aw.ds&gad_source=1">Flipkart : ₹59,900</a></li>
+                <li><a href="https://www.amazon.in/Apple-Headphones-Cancellation-Transparency-Personalised/dp/B0DGJ61KZ8/ref=asc_df_B0DGJ61KZ8/?tag=googleshopdes-21&linkCode=df0&hvadid=710141150090&hvpos=&hvnetw=g&hvrand=11198121544658140544&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9302548&hvtargid=pla-2367860499266&mcid=fed33a4ace243f09bc90e9db6c6be32e&gad_source=1&th=1">Amazon : ₹59,900</a></li>
+            </ul>
+        </a>
+        </div>
+
+
+
+
+    </section>
+   
+
+
+    
+    <div id="backfoot"><h2>Best Price Comparison Website in India</h2>
+        <p class="para">Searching for your favourite products at the best possible prices? At pricee.com we give you easy access to the best deals that can help you save more money while shopping.
+         <br>
+         Shortlisting, filtering, and researching takes away a lot of time, and when you have finally decided on what you want to buy, it can get cumbersome to find the best deals on that particular product. With <a href="http://" target="_blank" rel="noopener noreferrer">Amazon</a>, <a href="http://" target="_blank" rel="noopener noreferrer">flipkart</a>,<a href="http://" target="_blank" rel="noopener noreferrer">myntra</a> , <a href="http://" target="_blank" rel="noopener noreferrer">paytm</a>and other similar platforms offering varied discounts, it can also get tough to fish out the best offers. That's when you are going to need a platform like pricee.com  a one stop solution for online price comparisons across multiple product categories.
+     </p> 
+         <br>
+         
+        <h2> How to Compare price online?</h2><p class="para">
+         It's simple! Simply visit www.pricee.com and search for the product you are looking for. The website will throw a pool of results for your search; here you will see the best prices available online for that product, so you can compare prices online, click on your choice and make the purchase.
+         
+        </p>
+        <br>
+         <h2>
+             Compare Price and Shop Online for your Favorite Category Products </h2><p class="para"> You could be shopping for mobile phones, laptops, refrigerators, air conditioners, air purifiers, television or anything else; we always have them listed with us. Perhaps the most user-friendly search engine, pricee.com tells you which websites is a particular product available on and what are the variants on offer. Pricee.com also gives a quick overview of specs, user reviews, and their prices. Additionally, you can also set a custom price drop alert for your favourite products and receive them on your e-mail, so you will know when there is a 5%, 10% or 15% price drop.</p>
+        <br>
+         <h2>
+             How Do Price Comparison Sites Work?</h2>
+             <p class="para"> Price comparison sites work by dynamically fetching updated prices, features, reviews, descriptions, and all essential information on various products from different e-commerce sites. All this data is then tailored in a structured manner for your easy understanding. So, when you are searching for a product, the price comparison site fetches prices and gives you results using which you can make the best purchase. Many of these price comparison sites allow browser notifications, and many even let you set alerts for price drops.
+         
+                 Download the pricee app for <a class="line" href="#">android</a> and <a class="line" href="#">iOS </a>  devices and access the best offers with ease.</p>
+        </div>
+       
+    <footer>
+        <div id="footer_text1"> download :  <a class="line" href="#">android application </a>| <a class="line" href="#">iOS application</a></div>
+        <div>&copy Copyright Red Pixels Ventures Limited 2023. All rights reserved.</div>
+
+    </footer>
+    <script src="menu.js"></script>
+    <script src="hero.js"></script>
+    <script src="serchbar.js"></script>
+<script src="search.js"> </script>
+<script src="c"></script>
+<script src=""></script>
+
+</body>
+</html>
