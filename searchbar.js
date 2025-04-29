@@ -9,7 +9,8 @@ searchButton.addEventListener('click', () => {
 
 // Perform search based on selected platform
 function performSearch(platform) {
-    const query = document.getElementById('search-input').value.trim();
+    const searchInput = document.getElementById('search-input');
+    const query = searchInput ? searchInput.value.trim() : '';
     if (query) {
         let url = '';
         switch (platform) {
