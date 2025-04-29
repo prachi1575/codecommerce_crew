@@ -24,4 +24,4 @@
     } else {
         alert("Please enter a search query.");
     }
-  }
+  }//give range of platforms
