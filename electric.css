@@ -22,7 +22,7 @@
             color: #0a0c1c;
         }
 
-        /* Electric arc lines */
+        
         .electric-button::before,
         .electric-button::after {
             content: "";
