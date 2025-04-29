@@ -1,5 +1,5 @@
-import requests
-from bs4 import BeautifulSoup
+import requests #to prevent any errors requests was installed using pip install requests
+from bs4 import BeautifulSoup #pip install beautifulsoup4 used for bs4 installation
 from urllib.parse import urljoin
 
 def web_crawler(start_url, max_pages=5):
