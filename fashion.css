@@ -53,7 +53,7 @@
     0% { transform: skewX(-45deg) translateY(-50%) translateX(-150%); }
     100% { transform: skewX(-45deg) translateY(-50%) translateX(150%); }
 }
-/*fashion attributes*/
+/*fashion attributes hello*/
 
 .fashion-button span {
     position: relative;
